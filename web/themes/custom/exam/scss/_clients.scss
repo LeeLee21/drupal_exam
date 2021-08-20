@@ -1,0 +1,50 @@
+@import "mixins";
+@import "variables";
+
+#block-views-block-clients-view-block-1{
+  .block-title{
+    @include title ();
+    &:after,
+    &:before{
+      @include title_b_a();
+    }
+    &:before{
+      margin-left: -100%;
+    }
+    &:after{
+      margin-right: -100%;
+    }
+  }
+  .form-group{
+    .view-content{
+      .slick-track{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        .img-responsive{
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.views-view-grid{
+  .img-responsive{
+    margin: 0 auto;
+  }
+}
+.slider{
+  .content{
+    .img-responsive{
+      margin: 0 auto;
+    }
+    .field--name-body{
+      margin-top: 40px;
+      text-align: center;
+      p{
+        font-size: 16px;
+        color: $dark-gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import "mixins";
+@import "variables";
+
+.view-contact-view{
+  .view-content{
+    .views-row{
+      display: flex;
+      justify-content: center;
+      .views-field-fieldset{
+        max-width: 460px;
+        width: 100%;
+        margin-right: 20px;
+        .contact-left{
+          .contact-webform{
+            .form-text{
+              border-radius: 0;
+              height: 50px;
+            }
+            .form-email{
+              border-radius: 0;
+              height: 50px;
+            }
+            .form-tel{
+              border-radius: 0;
+              height: 50px;
+              width: 100%;
+            }
+            .form-textarea{
+              border-radius: 0;
+              resize: none;
+              height: 200px;
+            }
+            .webform-button--submit{
+              width: 190px;
+              height: 60px;
+              background-color: #e03114;
+              border: none;
+              font-size: 16px;
+              font-weight: 600;
+              &:hover{
+                background-color: #ad2811;
+                transition: ease 0.5s;
+              }
+            }
+          }
+        }
+      }
+      .views-field-fieldset-1{
+        max-width: 460px;
+        width: 100%;
+        .contact-right{
+          color: $purpur-blue;
+          .contact-country{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+          }
+          .contact-address{
+            margin-top: 3px;
+          }
+          .contact-address-2{
+            margin-top: 3px;
+          }
+          .contatc-telephone{
+            margin-top: 3px;
+            a{
+              color: $purpur-blue;
+              &:hover{
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+          .views-field-field-contact-email{
+            display: flex;
+            margin-top: 3px;
+            .views-label-field-contact-email{
+              margin-right: 5px;
+            }
+            a{
+              color: $purpur-blue;
+              &:hover{
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+          .contact-map{
+            margin-top: 30px;
+            iframe{
+              max-width: 460px;
+              width: 100%;
+              height: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:986px ) {
+  .view-contact-view{
+    .view-content{
+      .views-row{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .views-field-fieldset{
+          margin: 0;
+        }
+        .views-field-fieldset-1{
+          margin-top: 40px;
+          max-width: initial;
+          .views-field-field-contact-email{
+            justify-content: center;
+          }
+          .views-field-body{
+            .contact-map{
+              p{
+                iframe{
+                  max-width: 100%;
+                  height: 400px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .view-contact-view{
+    .view-content{
+      .views-row{
+        .views-field-fieldset{
+          .contact-left{
+            .contact-webform{
+              .form-text{
+                height: 40px;
+              }
+              .form-email{
+                height: 40px;
+              }
+              .form-tel{
+                height: 40px;
+              }
+              .form-textarea{
+                height: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

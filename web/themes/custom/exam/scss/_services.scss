@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins";
+
+#block-views-block-servises-view-block-1{
+  .block-title{
+    @include title();
+    &:after,
+    &:before{
+      @include title_b_a();
+    }
+    &:before{
+      margin-left: -100%;
+    }
+    &:after{
+      margin-right: -100%;
+    }
+  }
+  .view-servises-view{
+    .view-content{
+      display: flex;
+      align-items: center;
+      margin-top: 90px;
+      .views-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        .services-image{
+          height: 121px;
+        }
+        .services-title{
+          margin-top: 28px;
+          font-size: 22px;
+          letter-spacing: -1px;
+        }
+        .services-body{
+          margin-top: 5px;
+          color: $gray;
+          padding: 0 15px;
+          line-height: 13px;
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+        .views-field-view-node{
+          margin-top: 20px;
+          .services-link{
+            a{
+              text-transform: uppercase;
+              color: $white;
+              background-color: $blue;
+              padding: 3px 8px;
+              letter-spacing: -0.5px;
+              text-decoration: none;
+              &:hover{
+                background-color: $white;
+                color: $blue;
+                transition: 0.6s ease;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1100px) {
+  .view-servises-view{
+    .view-content{
+      flex-wrap: wrap;
+      row-gap: 30px;
+      .views-row{
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+@media (max-width:660px){
+  .view-servises-view{
+    .view-content{
+      row-gap: 40px;
+      .views-row{
+        flex-basis: 100%;
+        .services-body{
+          max-width: 320px;
+        }
+      }
+    }
+  }
+}
+.services{
+  .img-responsive{
+    margin: 0 auto;
+  }
+  p{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+    color: $dark-gray;
+  }
+}

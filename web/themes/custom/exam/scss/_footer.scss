@@ -1,0 +1,46 @@
+@import "mixins";
+@import "variables";
+
+.footer_wrapper{
+  background-color: #373645;
+  .footer{
+    border: none;
+    .region-footer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      #block-logo-2{
+        text-align: center;
+        .field--name-field-logo-title{
+          color: $blue;
+          font-size: 35px;
+          margin-top: 26px;
+          letter-spacing: 2px;
+          font-weight: 700;
+          line-height: 1;
+        }
+        .field--name-field-logo-second-title{
+          color: $white;
+          font-size: 16px;
+          letter-spacing: 0.6px;
+        }
+      }
+    }
+    .field--name-field-social-link{
+      display: flex;
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width:350px) {
+  .footer_wrapper{
+    .footer{
+      .region-footer{
+        flex-direction: column;
+      }
+      .field--name-field-social-link{
+        margin-top: 15px;
+      }
+    }
+  }
+}
